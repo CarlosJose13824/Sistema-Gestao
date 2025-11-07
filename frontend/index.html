@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD TechManage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CRUD TechManage</h1>
+
+  <!-- ===== USUÁRIOS ===== -->
+  <section>
+    <h2>Usuários</h2>
+    <form id="userForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome" required/>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required/>
+
+      <label for="perfil">Perfil:</label>
+      <input type="text" id="perfil" name="perfil" placeholder="Perfil" required/>
+
+      <button type="submit">Criar Usuário</button>
+    </form>
+    <button id="loadUsers">Listar Usuários</button>
+    <ul id="userList"></ul>
+  </section>
+
+  <!-- ===== PROJETOS ===== -->
+  <section>
+    <h2>Projetos</h2>
+    <form id="projectForm">
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo" placeholder="Título" required/>
+
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" placeholder="Descrição" required/>
+
+      <label for="data_inicio">Data Início:</label>
+      <input type="date" id="data_inicio" name="data_inicio" required/>
+
+      <label for="data_fim">Data Fim:</label>
+      <input type="date" id="data_fim" name="data_fim" required/>
+
+      <label for="id_usuario">ID Usuário:</label>
+      <input type="number" id="id_usuario" name="id_usuario" placeholder="ID Usuário" required/>
+
+      <button type="submit">Criar Projeto</button>
+    </form>
+    <button id="loadProjects">Listar Projetos</button>
+    <ul id="projectList"></ul>
+  </section>
+
+  <!-- ===== TAREFAS ===== -->
+  <section>
+    <h2>Tarefas</h2>
+    <form id="taskForm">
+      <label for="titulo_tarefa">Título:</label>
+      <input type="text" id="titulo_tarefa" name="titulo" placeholder="Título" required/>
+
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" placeholder="Status" required/>
+
+      <label for="prioridade">Prioridade:</label>
+      <input type="text" id="prioridade" name="prioridade" placeholder="Prioridade" required/>
+
+      <label for="id_projeto">ID Projeto:</label>
+      <input type="number" id="id_projeto" name="id_projeto" placeholder="ID Projeto" required/>
+
+      <button type="submit">Criar Tarefa</button>
+    </form>
+    <button id="loadTasks">Listar Tarefas</button>
+    <ul id="taskList"></ul>
+  </section>
+
+  <!-- Atualizar Usuário -->
+<h3>Atualizar Usuário</h3>
+<form id="updateUserForm">
+  <input type="number" placeholder="ID do Usuário" name="id" required/>
+  <input type="text" placeholder="Novo Nome" name="nome"/>
+  <input type="email" placeholder="Novo Email" name="email"/>
+  <input type="text" placeholder="Novo Perfil" name="perfil"/>
+  <button type="submit">Atualizar Usuário</button>
+</form>
+
+<!-- Deletar Usuário -->
+<h3>Deletar Usuário</h3>
+<form id="deleteUserForm">
+  <input type="number" placeholder="ID do Usuário" name="id" required/>
+  <button type="submit">Deletar Usuário</button>
+</form>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
