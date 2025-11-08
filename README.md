@@ -24,7 +24,7 @@ Instalação
 
 Clonar o repositório:
 
-git clone <URL_DO_REPOSITORIO>
+git clone <https://github.com/CarlosJose13824/Sistema-Gestao.git>
 cd sistema-gestao
 
 Instalar dependências:
